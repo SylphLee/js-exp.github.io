@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>title</title>
 </head>
 
@@ -12,6 +12,27 @@
   <div class="hello">
     <h1>Hello!</h1>
   </div>
-  <script src="app.js"></script>
+  <form class="hidden" id="login-form">
+    <input required maxlength="15" type="text" placeholder="What is your name?" />
+    <input type="submit" value="Log In" />
+  </form>
+  <h2 id="clock">00 : 00 : 00</h2>
+  <h1 id="greeting" class="hidden"></h1>
+  <div id="quote">
+    <span></span>
+    <span></span>
+  </div>
+  <h1>Random Number Game</h1>
+  <form id="form">
+    <p>Generate a NumBer Between 0 and <input id="num" /></p>
+    <p>Guess the number: <input id="num2" /> <button>Play!</button></p>
+    <p id="res"></p>
+    <p id="res2"></p>
+  </form>
+  <script src="js/greetings.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
 </body>
+
 </html>
