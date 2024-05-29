@@ -62,6 +62,7 @@ document.getElementById("form").onsubmit = function(e){
 }
 
 const greeting = document.querySelector("#greeting");
+const loginForm = document.querySelector("#login-form");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
