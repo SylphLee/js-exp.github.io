@@ -1,6 +1,6 @@
 const title = document.querySelector("div.hello:first-child h1");
 const html = document.querySelector("html");
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
 function handleTitleClick(){
   title.style.color = "blue";
