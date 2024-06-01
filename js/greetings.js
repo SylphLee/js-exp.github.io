@@ -5,19 +5,19 @@ const html = document.querySelector("html");
 function handleTitleClick(){
   title.style.color = "blue";
 }
-title.addEventListener("click", handleTitleClick);
+// title.addEventListener("click", handleTitleClick);
 
 function handleMouseEnter(){
   title.style.color = "red";
   title.innerText = "The mouse is here!"
 }
-title.addEventListener("mouseenter", handleMouseEnter);
+// title.addEventListener("mouseenter", handleMouseEnter);
 
 function handleMouseLeave(){
   title.style.color = "green";
   title.innerText = "The mouse is gond!"
 }
-title.addEventListener("mouseleave", handleMouseLeave);
+// title.addEventListener("mouseleave", handleMouseLeave);
 
 // function handleWindowResize(){
 //   title.style.color = "pink";
@@ -42,27 +42,29 @@ function handleAuxClick(){
   title.style.color = "orange";
   title.innerText = "that was a light Click!"
 }
-html.addEventListener("contextmenu", handleAuxClick);
+// html.addEventListener("contextmenu", handleAuxClick);
 
-document.getElementById("form").onsubmit = function(e){
-  const num = document.querySelector("#num");
-  const num2 = document.querySelector("#num2");
-  const res = document.querySelector("#res");
-  const res2 = document.querySelector("#res2");
-  e.preventDefault();
-  const a = Math.ceil(parseInt(num.value));
-  const b = Math.ceil(parseInt(num2.value));
-  const r = Math.ceil(Math.random() * (a - 0) + 0);
-  res.innerText = "You chose : " + b + " , the machine chose : " + r;
-  if(b === r) {
-    res2.innerText = "You Won!";
-  } else {
-    res2.innerText = "You lost!";
-  }
-}
+// document.getElementById("form").onsubmit = function(e){
+//   const num = document.querySelector("#num");
+//   const num2 = document.querySelector("#num2");
+//   const res = document.querySelector("#res");
+//   const res2 = document.querySelector("#res2");
+//   e.preventDefault();
+//   const a = Math.ceil(parseInt(num.value));
+//   const b = Math.ceil(parseInt(num2.value));
+//   const r = Math.ceil(Math.random() * (a - 0) + 0);
+//   res.innerText = "You chose : " + b + " , the machine chose : " + r;
+//   if(b === r) {
+//     res2.innerText = "You Won!";
+//   } else {
+//     res2.innerText = "You lost!";
+//   }
+// }
 
 const greeting = document.querySelector("#greeting");
 const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const hello = document.querySelector(".hello");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
@@ -75,8 +77,10 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello! ${username}!`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.classList.add("hello");
+  hello.classList.add(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
